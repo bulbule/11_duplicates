@@ -7,8 +7,8 @@ from termcolor import colored
 def dups_size(root_folder):
 
     dups_size = {}
-    for dir_name, subdir, fileList in os.walk(root_folder):
-        for file in fileList:
+    for dir_name, subdir, file_list in os.walk(root_folder):
+        for file in file_list:
             file_path = os.path.join(dir_name, file)
             file_size = os.path.getsize(file_path)
             if file_size in dups_size:
